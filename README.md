@@ -10,7 +10,7 @@ This version of the application can be packaged and deployed as a Docker contain
         
 2. To run the container run:
 			
-		sudo docker run -p 5000:5000 dg-fibonacci-be
+		sudo docker run -p 5000:5000 -d --name dg-fibonacci-be dg-fibonacci-be
 
 3. To access the API:
 		

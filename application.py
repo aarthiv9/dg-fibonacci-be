@@ -3,9 +3,12 @@ import math
 
 import flask
 from flask import Flask, jsonify, send_file, Response, request
+from flask.ext.cors import CORS
 
 # Create the Flask app
 app = flask.Flask(__name__)
+
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}}, methods=['GET'])
 
 @app.errorhandler(400)
 def bad_request(e=None):
