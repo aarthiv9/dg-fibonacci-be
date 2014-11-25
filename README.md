@@ -1,4 +1,4 @@
-# Fibonacci number calculation REST backend
+# Fibonacci number calculation RESTfull backend
 This Python sample application uses the [Flask](http://flask.pocoo.org/) framework.
 
 This version of the application can be packaged and deployed as a Docker container. 
