@@ -5,6 +5,9 @@ import flask
 from flask import Flask, jsonify, send_file, Response, request
 from flask.ext.cors import CORS
 
+from fib_calc import fib
+
+
 # Create the Flask app
 app = flask.Flask(__name__)
 
@@ -28,7 +31,7 @@ def internal_server_error(e=None):
 
 @app.route('/api/fibonacci/<int:num>', methods=['GET'])
 def fibonacci(num):
-    return jsonify({'fibonacci': int(((1+math.sqrt(5))**num-(1-math.sqrt(5))**num)/(2**num*math.sqrt(5)))})
+    return jsonify({'fibonacci': fib(num)})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
